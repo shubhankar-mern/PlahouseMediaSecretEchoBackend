@@ -24,25 +24,25 @@ A scalable Node.js backend for a real-time chat application with simulated AI re
 backend/
 ├── config/
 │   ├── db.js             # Database configuration
-│   └── jwt.js            # JWT configuration
+│             # JWT configuration
 ├── controllers/
 │   ├── authController.js # Authentication logic
 │   └── messageController.js
 ├── middleware/
 │   ├── auth.js           # JWT verification
-│   ├── error.js          # Error handling
-│   └── logger.js         # Request logging
+│   
+│   
 ├── models/
 │   ├── User.js
 │   ├── Message.js
 │   └── Conversation.js
 ├── routes/
-│   ├── auth.js
-│   └── messages.js
+│   ├── index.js
+│   
 ├── socket/
 │   └── index.js          # Socket.IO logic
 ├── utils/
-│   └── responses.js      # AI response templates
+│   └── constants.js      # AI response templates
 ├── .env.example
 ├── index.js              # Entry point
 └── package.json
@@ -69,17 +69,11 @@ MONGODB_URI_TEST=mongodb://localhost:27017/chat_app_test
 
 # JWT Configuration
 JWT_SECRET=your_jwt_secret_key
-JWT_EXPIRES_IN=24h
 
-# CORS Configuration
-ALLOWED_ORIGINS=http://localhost:3000
 
-# Rate Limiting
-RATE_LIMIT_WINDOW=15
-RATE_LIMIT_MAX_REQUESTS=100
+# CLIENT Configuration
+CLIENT_URL=http://localhost:5173
 
-# Cluster Configuration
-CLUSTER_WORKERS=auto  # 'auto' or specific number
 ```
 
 ### Installation
