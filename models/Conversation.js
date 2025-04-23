@@ -35,7 +35,6 @@ const conversationSchema = new mongoose.Schema({
 
 // Indexes for better performance
 conversationSchema.index({ user: 1, updatedAt: -1 });
-conversationSchema.index({ user: 1, archived: 1 });
 
 const Conversation = mongoose.model('Conversation', conversationSchema);
 module.exports = Conversation;
