@@ -122,13 +122,12 @@ POST /api/conversations
 ```javascript
 'connection'        // Initial connection
 'message:send'      // Send new message
-'user:typing'       // User typing status
+
 ```
 
 ### Server -> Client
 ```javascript
 'message:received'  // New message received
-'user:status'      // User online/offline status
 ```
 
 ## 🏗️ Architecture Decisions
